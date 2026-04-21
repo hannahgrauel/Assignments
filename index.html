@@ -70,12 +70,12 @@
      padding-left: 10px;
    }
 
-        
+   /* color style for map legend */     
    .renter {
-         color:#cc00c2;
+         color:#d12929;
    }
    .owner{
-         color:#00d2e6;
+         color:#11c017;
    }
 
    /* style for items with the class "chevron" */
@@ -118,37 +118,37 @@
      </div>
    </div>
 
-   <script>
-     mapboxgl.accessToken = 'pk.eyJ1IjoiaGFubmFoZ3JhdWVsIiwiYSI6ImNtbzdnemRlMzAxZWsyeXB4bHphdTVrNHEifQ.VSP9tCjripdszVLblBZpog'; 
+         <script>
+           mapboxgl.accessToken = 'pk.eyJ1IjoiaGFubmFoZ3JhdWVsIiwiYSI6ImNtbzdnemRlMzAxZWsyeXB4bHphdTVrNHEifQ.VSP9tCjripdszVLblBZpog'; 
 
-     var map = new mapboxgl.Map({
-         container: 'map', // container id
-         style: 'mapbox://styles/hannahgrauel/cmo0dozrf000t01see8y61e40', // stylesheet location
-         center: [-122.6788, 45.4612], // starting position [lng, lat]
-         zoom: 9.5 // starting zoom
-     });
+           var map = new mapboxgl.Map({
+           container: 'map', // container id
+           style: 'mapbox://styles/hannahgrauel/cmo0dozrf000t01see8y61e40', // stylesheet location
+           center: [-122.6788, 45.4612], // starting position [lng, lat]
+           zoom: 9.5 // starting zoom
+           });
 
-      // Add zoom and rotation controls to the map.
-     map.addControl(new mapboxgl.NavigationControl());
+            // Add zoom and rotation controls to the map.
+           map.addControl(new mapboxgl.NavigationControl());
      
 
-     //legend interaction
+           //legend interaction
            var state = { panelOpen: true };
 
-      function panelSelect(e){
-        if(state.panelOpen){
-          document.getElementById('descriptionPanel').style.height = '26px';
-          document.getElementById('glyph').className = "chevron glyphicon glyphicon-chevron-up";
-          state.panelOpen = false;
-        } else {
-          document.getElementById('descriptionPanel').style.height = '250px';
-          document.getElementById('glyph').className = "chevron glyphicon glyphicon-chevron-down";
-          state.panelOpen = true;
-        }
-      }
+           function panelSelect(e){
+           if(state.panelOpen){
+           document.getElementById('descriptionPanel').style.height = '26px';
+           document.getElementById('glyph').className = "chevron glyphicon glyphicon-chevron-up";
+           state.panelOpen = false;
+           } else {
+            document.getElementById('descriptionPanel').style.height = '250px';
+           document.getElementById('glyph').className = "chevron glyphicon glyphicon-chevron-down";
+           state.panelOpen = true;
+           }
+           }
     
 
-   </script>
+           </script>
 
  </body>
  </html>
